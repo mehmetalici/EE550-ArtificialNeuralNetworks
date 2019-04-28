@@ -34,4 +34,37 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=w_1,w_2,w_3" target="_
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_3=-\frac{w_1}{w_3}x_1-\frac{w_2}{w_3}x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_3=-\frac{w_1}{w_3}x_1-\frac{w_2}{w_3}x_2" title="x_3=-\frac{w_1}{w_3}x_1-\frac{w_2}{w_3}x_2" /></a>
 
-Creating a meshgrid for <a href="https://www.codecogs.com/eqnedit.php?latex=x_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_1" title="x_1" /></a>
+Creating a meshgrid for <a href="https://www.codecogs.com/eqnedit.php?latex=x_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_1" title="x_1" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_2" title="x_2" /></a>  a nice decision hyperplane was obtained with surf function.
+
+
+Selecting 10 samples of each classes the model is tested for prediction accuracy. To do this, the
+specimens were multiplied with the trained weights and taking their sign functions the
+predictions were obtained. Then, the prediction accuracy is obtained by, 
+```
+mean(double(y == sample_test(:,4))*100) 
+```
+
+where y and the sample_test’s forth column are predicted and the actual output, respectively.
+This value turns out to be %100 as it validates the algorithm being implemented successfully
+and it is printed to the command window for user. 
+
+
+Five random points were taken from the test sample set and visualized with blue and red circles
+based on having a positive or negative output, respectively. Here it is also validated that the
+algorithm works without problem.
+Finally, the calculated cost function were plotted against each iteration number to check its
+convergence. It is shown that it converges to a steady state quickly after a maximum of a few
+iterations. This is due to the fact that the training set is seperated linearly by a hyperplane. 
+
+## Design Decisions
+The program was organized in an interactive fashion. In certain waypoints, the program prints
+out the current execution, information about the plots and also asks user’s confirmation to
+continue. Furthermore, the source and plots were fully commented and vectorized
+implementation is preferred wherever possible. Therefore, the user will be able to examine the
+plots comfortably and stay in tune with the current execution and can have a better analysis on
+the implementation. 
+
+## Conclusion
+In this project the perceptron model neural network was implemented in an interactive fashion.
+The program trains with the data points in 3D space and tries to predict the output for each
+sample data. It is shown that the cost function converges to zero after a number of iterations. 
