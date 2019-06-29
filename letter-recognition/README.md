@@ -1,4 +1,4 @@
-# letter-recognition
+# letter-recognizer
 Recognition of the letters A through E from distorted patterns via Discrete Hopfield Neural Network Model. This project is a part of the EE550 Artificial Neural Networks course offered at Boğaziçi University.
 
 ## Limitations and Concerns
